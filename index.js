@@ -3,4 +3,7 @@ const input = document.createElement('input');
 
 input.value='iam here!!';
 
-pTag.replaceWith(input);
+const Btn = document.createElement('button');
+Btn.textContent ='Click me!';
+
+pTag.replaceWith(input, Btn);
