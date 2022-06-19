@@ -1,5 +1,6 @@
-const area = document.querySelector('.box');
-const box = document.createElement('div');
-box.id = 'box';
+const pTag = document.querySelector('.example');
+const input = document.createElement('input');
 
-area.insertAdjacentElement('beforebegin',box);
+input.value='iam here!!';
+
+pTag.replaceWith(input);
