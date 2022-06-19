@@ -1,8 +1,5 @@
+const area = document.querySelector('.box');
+const box = document.createElement('div');
+box.id = 'box';
 
-const myDiv = document.getElementById('myDiv');
-
-myDiv.dataset.name='ahmad';
-myDiv.dataset.age='21'
-
-myDiv.removeAttribute('data-name');
-console.log(myDiv.dataset);
+area.insertAdjacentElement('beforebegin',box);
