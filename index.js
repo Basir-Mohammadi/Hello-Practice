@@ -49,3 +49,28 @@ myPromise.then(
     function(error) {console.log(error);},
     function(value) {console.log(value);}
 );
+
+const hasMeetting=false;
+
+const meeting = new Promise ((reslove, reject) => {
+    const meetingDetails = {
+        title: 'marketing brand',
+        time: '1 pm',
+        location: 'Zoom'
+    }
+    if(!hasMeetting)
+    {
+        reslove(meetingDetails);
+    } else{
+        reject(new Error('meeting already scheduled!'))
+    }
+});
+
+meeting
+    .then(res =>{
+        console.log('meething scheduled');
+        console.log(res);
+    })
+    .catch(err => {
+        console.log(err.message);
+    })
