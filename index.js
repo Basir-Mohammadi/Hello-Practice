@@ -31,9 +31,9 @@
 
 // userInfo('basir','ahmad', greeting);
 
-function displayValue (value) {
-    document.getElementById('demo').innerHTML = value;
-}
+// function displayValue (value) {
+//     document.getElementById('demo').innerHTML = value;
+// }
 
 
 const myPromise  = new Promise((resolve, reject ) => {
@@ -50,7 +50,7 @@ myPromise.then(
     function(value) {console.log(value);}
 );
 
-const hasMeetting=false;
+const hasMeetting=true;
 
 const meeting = new Promise ((reslove, reject) => {
     const meetingDetails = {
@@ -66,11 +66,29 @@ const meeting = new Promise ((reslove, reject) => {
     }
 });
 
-meeting
-    .then(res =>{
-        console.log('meething scheduled');
-        console.log(res);
-    })
-    .catch(err => {
+const addToCalendar = meetingDetails => {
+    const calendar = `${meetingDetails.title} is scheduled at ${meetingDetails.time} on ${meetingDetails.location}`;
+    return Promise.resolve(calendar);
+}
+
+// meeting
+//     .then(addToCalendar)
+//     .then(res =>{
+//         console.log('meething scheduled');
+//         console.log(res);
+//     })
+//     .catch(err => {
+//         console.log(err.message);
+//     })
+
+async function myMeeting() {
+    try{
+    const meetingDetails = await meeting;
+    const message = await addToCalendar(meetingDetails);
+    console.log(message);
+    } catch(err) {
         console.log(err.message);
-    })
+    }
+}
+
+myMeeting();
