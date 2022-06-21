@@ -25,5 +25,8 @@ console.log(greet);
 // callback function
 let greeting = name => console.log(`Hii ${name}!`);
 const userInfo = (firstName, lastName, callback) => {
-
+    const fullName =  `${firstName} ${lastName}`;
+    callback(fullName);
 }
+
+userInfo('basir','ahmad', greeting);
