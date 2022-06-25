@@ -110,3 +110,5 @@ function fibonacci(n) {
   }
 
   fibonacci(5);
+
+  document.querySelector('demo').innerHTML='goodbye';
