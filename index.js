@@ -111,4 +111,14 @@ function fibonacci(n) {
 
   fibonacci(5);
 
-  document.querySelector('demo').innerHTML='goodbye';
+  document.querySelector('.demo').innerHTML='goodbye';
+
+
+  const houseKeeper = {
+    name: 'anne',
+    exp:'2yrs',
+    job:'cleaning'
+  }
+
+
+  console.log(houseKeeper.name);
