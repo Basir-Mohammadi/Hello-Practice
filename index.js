@@ -130,11 +130,14 @@ function fibonacci(n) {
     this.age=age;
     this.hasWorked=hasWorked;
     this.languages=languages;
+    this.moveSuitCase = function(){
+        alert('may i pick your suitcase?')
+    }
   }
 
   const BellBoy1 = new BellBoy('anne',19,true,['english','franch']);
   const BellBoy2 = new BellBoy('abi',20, false,'english');
 
-  console.log(BellBoy2.languages);
+//   console.log(BellBoy2.languages);
 
-  console.log(BellBoy1.languages);
+  console.log(BellBoy1);
