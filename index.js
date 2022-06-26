@@ -117,8 +117,9 @@ function fibonacci(n) {
   const houseKeeper = {
     name: 'anne',
     exp:'2yrs',
-    job:'cleaning'
+    job: ['cleaning','loding','bedroom'],
+
   }
 
 
-  console.log(houseKeeper.name);
+  console.log(houseKeeper.job[0]);
