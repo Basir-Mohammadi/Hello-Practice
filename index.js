@@ -111,8 +111,11 @@ function fibonacci(n) {
 
   fibonacci(5);
 
-  document.querySelector('.demo').innerHTML='goodbye';
 
+   const headr = document.querySelector('.demo');
+headr.addEventListener('click', () => {
+    headr.classList.add('green');
+})
 
   const houseKeeper = {
     name: 'anne',
